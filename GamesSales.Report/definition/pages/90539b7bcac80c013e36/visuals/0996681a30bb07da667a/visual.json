@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "2f2b0cb660c50ced0edb",
+  "name": "0996681a30bb07da667a",
   "position": {
-    "x": 43.768996960486326,
-    "y": 421.15501519756839,
-    "z": 0,
-    "height": 280.1215805471125,
-    "width": 1211.9148936170213,
-    "tabOrder": 0
+    "x": 43.448275862068968,
+    "y": 165.81280788177341,
+    "z": 2,
+    "height": 231.42857142857142,
+    "width": 635.76354679802955,
+    "tabOrder": 2
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -23,11 +23,11 @@
                       "Entity": "vgsales"
                     }
                   },
-                  "Property": "Name"
+                  "Property": "Publisher"
                 }
               },
-              "queryRef": "vgsales.Name",
-              "nativeQueryRef": "Name",
+              "queryRef": "vgsales.Publisher",
+              "nativeQueryRef": "Publisher",
               "active": true
             }
           ]
@@ -85,7 +85,26 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "912903177c36b37ea094",
+        "name": "3b2486a8e07ad9c92d86",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "vgsales"
+                  }
+                },
+                "Property": "Global_Sales"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8fea0dc5a50047764ad0",
         "field": {
           "Column": {
             "Expression": {
@@ -93,7 +112,7 @@
                 "Entity": "vgsales"
               }
             },
-            "Property": "Name"
+            "Property": "Publisher"
           }
         },
         "type": "TopN",
@@ -121,7 +140,7 @@
                               "Source": "v"
                             }
                           },
-                          "Property": "Name"
+                          "Property": "Publisher"
                         },
                         "Name": "field"
                       }
@@ -146,7 +165,7 @@
                         }
                       }
                     ],
-                    "Top": 20
+                    "Top": 10
                   }
                 }
               },
@@ -170,7 +189,7 @@
                             "Source": "v"
                           }
                         },
-                        "Property": "Name"
+                        "Property": "Publisher"
                       }
                     }
                   ],
@@ -184,25 +203,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "805566715d00896a1ab4",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "vgsales"
-                  }
-                },
-                "Property": "Global_Sales"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }
