@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "GamesSales"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fe2645e4-8226-4290-ae5a-375630762f97"
+  }
+}
