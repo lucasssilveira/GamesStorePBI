@@ -11,5 +11,9 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
+annotation PBI_QueryOrder = ["vgsales"]
+
+ref table vgsales
+
 ref cultureInfo pt-BR
 

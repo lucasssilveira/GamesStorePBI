@@ -7,7 +7,21 @@
         "x": 0,
         "y": 0
       },
-      "nodes": [],
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "vgsales",
+          "nodeLineageTag": "31dcb3a7-167d-4cf0-9478-b7e1d4d2ddbf",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
       "name": "Todas as tabelas",
       "zoomValue": 100,
       "pinKeyFieldsToTop": false,

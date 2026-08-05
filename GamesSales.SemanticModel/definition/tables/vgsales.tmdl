@@ -1,0 +1,116 @@
+table vgsales
+	lineageTag: 31dcb3a7-167d-4cf0-9478-b7e1d4d2ddbf
+
+	column Rank
+		dataType: int64
+		formatString: 0
+		lineageTag: 87489a9e-69fc-46f0-8b55-47f6101ab6eb
+		summarizeBy: sum
+		sourceColumn: Rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 78745be2-8af7-48ec-816d-ded0c7f990c0
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Platform
+		dataType: string
+		lineageTag: e7d6b92e-43ca-4052-8d6d-d5a54321c8e5
+		summarizeBy: none
+		sourceColumn: Platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: string
+		lineageTag: 30d45e02-f266-4900-8da5-4e56088e137e
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Genre
+		dataType: string
+		lineageTag: d6efe212-ae0b-429f-8f2b-2cf328570b52
+		summarizeBy: none
+		sourceColumn: Genre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Publisher
+		dataType: string
+		lineageTag: 57383385-e36f-4663-a7fa-63847d2e84a5
+		summarizeBy: none
+		sourceColumn: Publisher
+
+		annotation SummarizationSetBy = Automatic
+
+	column NA_Sales
+		dataType: double
+		lineageTag: 95fa66fc-89e6-420b-8ce2-0393fa802988
+		summarizeBy: sum
+		sourceColumn: NA_Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EU_Sales
+		dataType: double
+		lineageTag: c3530cc2-c1e1-48c0-9c9c-16ec2ef73d2d
+		summarizeBy: sum
+		sourceColumn: EU_Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column JP_Sales
+		dataType: double
+		lineageTag: e38272bb-5ffb-4f6d-a8a3-450d9ee89907
+		summarizeBy: sum
+		sourceColumn: JP_Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Other_Sales
+		dataType: double
+		lineageTag: 310c5e49-3d36-4281-a884-30bdf34ade4f
+		summarizeBy: sum
+		sourceColumn: Other_Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Global_Sales
+		dataType: double
+		lineageTag: fabf61eb-e5f1-4caa-9836-f1e103146399
+		summarizeBy: sum
+		sourceColumn: Global_Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition vgsales = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("D:\PowerBI Projetos\Games 1.0\dataset\vgsales.csv"),[Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Rank", Int64.Type}, {"Name", type text}, {"Platform", type text}, {"Year", type text}, {"Genre", type text}, {"Publisher", type text}, {"NA_Sales", type number}, {"EU_Sales", type number}, {"JP_Sales", type number}, {"Other_Sales", type number}, {"Global_Sales", type number}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
