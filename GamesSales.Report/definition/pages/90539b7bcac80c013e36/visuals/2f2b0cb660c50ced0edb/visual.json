@@ -319,25 +319,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "805566715d00896a1ab4",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "vgsales"
-                  }
-                },
-                "Property": "Global_Sales"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -4,10 +4,10 @@
   "position": {
     "x": 670.34482758620686,
     "y": 25.714285714285715,
-    "z": 1,
+    "z": 1000,
     "height": 383.94088669950742,
     "width": 585.22167487684726,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "donutChart",
@@ -335,42 +335,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4dfe81952abb92c77585",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "vgsales"
-              }
-            },
-            "Property": "Genre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7d12f8c1d396a00e95ae",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "vgsales"
-                  }
-                },
-                "Property": "Global_Sales"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

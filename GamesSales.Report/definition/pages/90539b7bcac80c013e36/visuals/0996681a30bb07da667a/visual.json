@@ -3,11 +3,11 @@
   "name": "0996681a30bb07da667a",
   "position": {
     "x": 43.448275862068968,
-    "y": 164.92610837438423,
-    "z": 2,
+    "y": 154.28571428571428,
+    "z": 2000,
     "height": 231.42857142857142,
     "width": 606.50246305418716,
-    "tabOrder": 2
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -226,25 +226,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "3b2486a8e07ad9c92d86",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "vgsales"
-                  }
-                },
-                "Property": "Global_Sales"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "8fea0dc5a50047764ad0",
         "field": {
