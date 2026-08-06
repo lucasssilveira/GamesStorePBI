@@ -3,10 +3,10 @@
   "name": "0996681a30bb07da667a",
   "position": {
     "x": 43.448275862068968,
-    "y": 165.81280788177341,
+    "y": 164.92610837438423,
     "z": 2,
     "height": 231.42857142857142,
-    "width": 535.56650246305423,
+    "width": 606.50246305418716,
     "tabOrder": 2
   },
   "visual": {
@@ -101,7 +101,21 @@
             "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'left'"
+                  "Value": "'center'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top 10 Empresas Que Mais Venderam'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
